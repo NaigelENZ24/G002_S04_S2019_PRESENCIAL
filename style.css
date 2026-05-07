@@ -1,0 +1,125 @@
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Variables ── */
+:root {
+  --bg:        #f4f6f8;
+  --card:      #ffffff;
+  --primary:   #2563eb;
+  --primary-h: #1d4ed8;
+  --text:      #1e293b;
+  --muted:     #64748b;
+  --border:    #cbd5e1;
+  --error:     #dc2626;
+  --radius:    10px;
+  --shadow:    0 4px 24px rgba(0,0,0,.10);
+}
+
+/* ── Body ── */
+body {
+  font-family: 'Georgia', serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Card ── */
+.container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ── Heading ── */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: .25rem;
+}
+
+.subtitle {
+  font-size: .9rem;
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+}
+
+/* ── Form group ── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .4rem;
+}
+
+input {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: .65rem .9rem;
+  font-size: .95rem;
+  color: var(--text);
+  transition: border-color .2s;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--primary);
+}
+
+input.invalid {
+  border-color: var(--error);
+}
+
+/* ── Error messages ── */
+.error {
+  font-size: .78rem;
+  color: var(--error);
+  margin-top: .3rem;
+  min-height: 1rem;
+}
+
+/* ── Button ── */
+button {
+  width: 100%;
+  padding: .75rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: .5rem;
+  transition: background .2s, transform .1s;
+}
+
+button:hover {
+  background: var(--primary-h);
+}
+
+button:active {
+  transform: scale(.98);
+}
