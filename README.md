@@ -29,3 +29,4 @@ Formulario de registro con campos de **Nombre**, **Correo** y **Contraseña**, c
 - **Contraseña**: debe tener mínimo 8 caracteres.
 
 Si hay errores, se muestran debajo de cada campo. Si todo es correcto, se muestra un `alert()` de bienvenida.
+Naigel Enriquez
